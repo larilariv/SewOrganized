@@ -44,12 +44,15 @@ const PatternSchema = new mongoose.Schema(
     inPrint: Boolean,
     quantity: Number,
     rating: { type: Number, default: 0, min: 0, max: 5 },
-    size: String,
+    letterSize: [{ type: String, enum: ["XS", "S", "M", "L", "XL"] }],
+    numSize: [
+      { type: Number, enum: [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26] },
+    ],
     tags: [{ type: String }],
   },
   { timestamps: true }
 );
 
-const Pattern = Mongoose.model("Pattern", PatternSchema);
+const Pattern = mongoose.model("Pattern", PatternSchema);
 
 module.exports = Pattern;
