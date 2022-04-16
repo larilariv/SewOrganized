@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const mongoURI =
   process.env.NODE_ENV === "production"
     ? process.env.DB_URL
-    : "mongodb+srv://larilari:KKira117@cluster0.wyf8q.mongodb.net/sewing-pattern-collection?retryWrites=true&w=majority";
+    : "mongodb+srv://larilariv:KKira117@cluster0.ahewf.mongodb.net/sewing-patterns";
 
 mongoose
   .connect(mongoURI, {
