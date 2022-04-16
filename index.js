@@ -4,7 +4,7 @@ const app = express();
 
 const Pattern = require("./models/pattern-model");
 
-app.get("/", (req, res) => res.render("Boop"));
+app.get("/test", (req, res) => res.send("Boop"));
 
 const port = process.env.PORT || 7000;
 
