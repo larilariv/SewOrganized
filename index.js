@@ -1,19 +1,13 @@
 const express = require("express");
 const app = express();
-const Pattern = require("./models/pattern-model");
+const patternsController = require("./controllers/patternsController");
 
 app.set("view engine", "hbs");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/patterns", (req, res) => {
-  Pattern.find({})
-    .then((patterns) => {
-      res.render("patterns/index", { patterns });
-    })
-    .catch(console.error);
-});
+app.use("/patterns", patternsController);
 
 const port = process.env.PORT || 7000;
 
