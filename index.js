@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const Pattern = require("./models/pattern-model");
 
-app.set("view enigine", "hbs");
+app.set("view engine", "hbs");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/patterns", (req, res) => {
   Pattern.find({})
     .then((patterns) => {
-      res.json(patterns);
+      res.render("patterns/index", { patterns });
     })
     .catch(console.error);
 });
