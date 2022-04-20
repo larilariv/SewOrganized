@@ -11,10 +11,22 @@ router.get("/", (req, res) => {
     .catch(console.error);
 });
 
+router.get("/new", (req, res) => {
+  res.render("patterns/new");
+});
+
 router.get("/:id", (req, res) => {
   Pattern.find({})
     .then((pattern) => {
       res.render("patterns/show", pattern[req.params.id]);
+    })
+    .catch(console.error);
+});
+
+router.post("/", (req, res) => {
+  Pattern.create(req.body)
+    .then((pattern) => {
+      res.redirect("/patterns");
     })
     .catch(console.error);
 });
