@@ -23,6 +23,32 @@ router.get("/:id", (req, res) => {
     .catch(console.error);
 });
 
+router.get("/:id/edit", (req, res) => {
+  const id = req.params.id;
+  Pattern.findById(id)
+    .then((pattern) => {
+      res.render("patterns/edit", pattern);
+    })
+    .catch(console.error);
+});
+
+router.put("/:id", (req, res) => {
+  const id = req.params.id;
+  Pattern.findOneAndUpdate(
+    { _id: id },
+    {
+      name: req.body.name,
+      // brand: req.body.brand,
+      // categories: req.body.categories,
+    },
+    { new: true }
+  )
+    .then((pattern) => {
+      res.render("patterns/show", pattern);
+    })
+    .catch(console.error);
+});
+
 router.post("/", (req, res) => {
   Pattern.create(req.body)
     .then((pattern) => {

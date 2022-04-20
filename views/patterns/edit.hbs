@@ -1,0 +1,23 @@
+<h1>Edit Pattern Listing:</h1>
+
+<form action="/patterns/{{this.id}}/?_method=put" method="POST">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" value="{{this.name}}">
+    </div>
+
+    <div>
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" class="form-control" value="{{this.brand}}">
+    </div>
+
+    <div>
+        <label for="categories">Categories:</label>
+        <input type="text" id="categories" name="categories" class="form-control" value="{{this.categories}}">
+    </div>
+
+    <input type="submit" value="Update Pattern Listing" class="btn btn-primary" />
+    <a href="/patterns" class="btn btn-secondary">Cancel</a>
+
+</form>
