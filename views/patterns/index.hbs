@@ -1,8 +1,12 @@
-<h1>Patterns</h1>
+<h1>My Sewing Pattern Collection</h1>
+
 <ul class="list-group">
   {{#each patterns}}
   <li class="list-group-item d-flex justify-content-between">
-    <div>{{this.name}}</div>
+    <div>
+      <img src="{{this.coverImage}}" class="img-fluid">
+      <h2><a href="">{{this.name}}</a></h2>
+      </div>
     <div class="links">
       <!-- for actions later -->
     </div>

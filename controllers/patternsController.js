@@ -11,4 +11,12 @@ router.get("/", (req, res) => {
     .catch(console.error);
 });
 
+router.get("/:id", (req, res) => {
+  Pattern.find({})
+    .then((pattern) => {
+      res.render("patterns/show", pattern[req.params.id]);
+    })
+    .catch(console.error);
+});
+
 module.exports = router;
