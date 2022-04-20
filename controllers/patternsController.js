@@ -38,8 +38,8 @@ router.put("/:id", (req, res) => {
     { _id: id },
     {
       name: req.body.name,
-      // brand: req.body.brand,
-      // categories: req.body.categories,
+      brand: req.body.brand,
+      categories: req.body.categories,
     },
     { new: true }
   )
@@ -50,6 +50,7 @@ router.put("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  console.log(req.body);
   Pattern.create(req.body)
     .then((pattern) => {
       res.redirect("/patterns");
