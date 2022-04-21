@@ -1,6 +1,11 @@
 <h1>{{brand}}: <a href="{{link}}">{{name}}</a></h1>
 
-<a href="/patterns/{{this.id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/patterns/{{this.id}}" class="btn btn-primary">Edit</a>
+
+<form action="/patterns/{{this.id}}?_method=DELETE" method="POST" class="d-inline">
+  <input type="submit" value="Delete" class="btn btn-danger" />
+</form>
+
 <a href="/patterns" class="btn btn-secondary">&larr; Back</a>
 
 <h2>{{categories}}</h2>

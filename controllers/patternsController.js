@@ -58,4 +58,13 @@ router.post("/", (req, res) => {
     .catch(console.error);
 });
 
+router.delete("/:id", (req, res) => {
+  const id = req.params.id;
+  Pattern.findOneAndRemove({ _id: id })
+    .then(() => {
+      res.redirect("/patterns");
+    })
+    .catch(console.error);
+});
+
 module.exports = router;
