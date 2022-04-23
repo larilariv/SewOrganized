@@ -1,17 +1,9 @@
-<header class="d-flex justify-content-between align-items-center">
-  <h1>My Sewing Pattern Collection</h1>
-  <a href="/patterns/new" class="btn btn-primary">New Pattern</a>
-</header>
-
 <ul class="list-group">
   {{#each patterns}}
   <li class="list-group-item d-flex justify-content-between">
     <div>
-      <img src="{{this.coverImage}}" class="img-fluid">
-      <h2><a href="/patterns/{{this.id}}/show">{{this.name}}</a></h2>
-      </div>
-    <div class="links">
-      <!-- for actions later -->
+      <img src="{{this.coverImage}}">
+      <h2><a href="/patterns/{{this.id}}">{{this.name}}</a></h2>
     </div>
   </li>
   {{/each}}
