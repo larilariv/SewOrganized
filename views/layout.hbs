@@ -16,10 +16,10 @@
 
   <body>
     {{!-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
         {{!-- Site Name --}}
-        <a class="navbar-brand" href="#">Sew Orgainized</a>
+        <a class="navbar-brand" href="/patterns">Sew Orgainized</a>
         {{!-- Menu Toggle on smaller window --}}
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
         data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,9 +30,6 @@
         {{!-- Navbar Links/Dropdowns --}}
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#!">Home</a>
-            </li>
             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Brands
@@ -48,7 +45,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbardrop">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#!">Create New</a>
+              <a class="nav-link" href="patterns/new">Create New</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#!">Advanced Search</a>
@@ -58,7 +55,8 @@
         </div>
       </div>
     </nav>
-
+    <div class="container-fluid">
     {{{body}}}
+    </div>
   </body>
 </html>

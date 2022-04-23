@@ -15,10 +15,12 @@ router.get("/new", (req, res) => {
   res.render("patterns/new");
 });
 
-router.get("/:id", (req, res) => {
-  Pattern.find({})
+router.get("/:name", (req, res) => {
+  console.log(req.params.name);
+
+  Pattern.findOne({ name: req.params.name })
     .then((pattern) => {
-      res.render("patterns/show", pattern[req.params.id]);
+      res.render("patterns/show", pattern);
     })
     .catch(console.error);
 });
