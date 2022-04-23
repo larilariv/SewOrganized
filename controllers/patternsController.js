@@ -23,9 +23,8 @@ router.get("/:name", (req, res) => {
     .catch(console.error);
 });
 
-router.get("/:id/edit", (req, res) => {
-  const id = req.params.id;
-  Pattern.findById(id)
+router.get("/:name/edit", (req, res) => {
+  Pattern.findOne({ name: req.params.name })
     .then((pattern) => {
       res.render("patterns/edit", pattern);
     })

@@ -1,6 +1,6 @@
 <h1>Edit Pattern Listing:</h1>
 
-<form action="/patterns/{{this.id}}/?_method=put" method="POST">
+<form action="/patterns/{{this.name}}/?_method=put" method="POST">
 
     <div>
         <label for="name">Name:</label>
@@ -13,9 +13,78 @@
     </div>
 
     <div>
+        <label for="link">Link:</label>
+        <input type="text" id="brand" name="link" class="form-control" value="{{this.link}}">
+    </div>
+
+    <div>
         <label for="categories">Categories:</label>
         <input type="text" id="categories" name="categories" class="form-control" value="{{this.categories}}">
     </div>
+
+    <div>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" class="form-control" value="{{this.description}}">
+    </div>
+
+    <div>
+        <label for="difficulty">Difficulty:</label>
+        <input type="text" id="difficulty" name="difficulty" class="form-control" value="{{this.difficulty}}">
+    </div>
+
+    <div>
+        <label for="fabricType">Fabric Type:</label>
+        <input type="text" id="fabricType" name="fabricType" class="form-control" value="{{this.fabricType}}">
+    </div>
+
+    <div>
+        <label for="fabricChoices">Fabric Choices:</label>
+        <input type="text" id="fabricChoices" name="fabricChoices" class="form-control" value="{{this.fabricChoices}}">
+    </div>
+
+    <div>
+        <label for="format">Format:</label>
+        <input type="text" id="format" name="format" class="form-control" value="{{this.format}}">
+    </div>
+
+    <div>
+        <label for="digitalPrinted">Printed yet? (if Digital):</label>
+        <input type="text" id="digitalPrinted" name="digitalPrinted" class="form-control" value="{{this.digitalPrinted}}">
+    </div>
+
+    <div>
+        <label for="inPrint">In print?:</label>
+        <input type="text" id="inPrint" name="inPrint" class="form-control" value="{{this.inPrint}}">
+    </div>
+
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" class="form-control" value="{{this.quantity}}">
+    </div>
+
+    <div>
+        <label for="rating">Rating:</label>
+        <input type="text" id="rating" name="rating" class="form-control" value="{{this.rating}}">
+    </div>
+
+    <div>
+        <label for="letterSize">Letter Size:</label>
+        <input type="text" id="letterSize" name="letterSize" class="form-control" value="{{this.letterSize}}">
+    </div>
+
+    <div>
+        <label for="numSize">Number Size:</label>
+        <input type="text" id="numSize" name="numSize" class="form-control" value="{{this.numSize}}">
+    </div>
+
+    <div>
+        <label for="tags">Tags:</label>
+        <input type="text" id="tags" name="tags" class="form-control" value="{{this.tags}}">
+    </div>
+
+
+
+
 
     <input type="submit" value="Update Pattern Listing" class="btn btn-primary" />
     <a href="/patterns" class="btn btn-secondary">Cancel</a>
