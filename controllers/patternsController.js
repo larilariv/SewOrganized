@@ -63,7 +63,6 @@ router.put("/:name", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
   Pattern.create(req.body)
     .then((pattern) => {
       res.redirect("/patterns");
@@ -71,9 +70,8 @@ router.post("/", (req, res) => {
     .catch(console.error);
 });
 
-router.delete("/:id", (req, res) => {
-  const id = req.params.id;
-  Pattern.findOneAndRemove({ _id: id })
+router.delete("/:name", (req, res) => {
+  Pattern.findOneAndRemove({ name: req.params.name })
     .then(() => {
       res.redirect("/patterns");
     })
