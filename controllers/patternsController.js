@@ -16,8 +16,6 @@ router.get("/new", (req, res) => {
 });
 
 router.get("/:name", (req, res) => {
-  console.log(req.params.name);
-
   Pattern.findOne({ name: req.params.name })
     .then((pattern) => {
       res.render("patterns/show", pattern);

@@ -1,15 +1,40 @@
 <h1>{{brand}}: <a href="{{link}}">{{name}}</a></h1>
 
-<a href="/patterns/{{this.id}}" class="btn btn-primary">Edit</a>
+<div>
+  <a href="/patterns/{{this.id}}" class="btn btn-primary">Edit</a>
+    <form action="/patterns/{{this.id}}?_method=DELETE" method="POST" class="d-inline">
+      <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+  <a href="/patterns" class="btn btn-secondary">&larr; Back</a>
+</div>
 
-<form action="/patterns/{{this.id}}?_method=DELETE" method="POST" class="d-inline">
-  <input type="submit" value="Delete" class="btn btn-danger" />
-</form>
+<div class="row">
 
-<a href="/patterns" class="btn btn-secondary">&larr; Back</a>
+  <div class="col-6">
 
-<h2>{{categories}}</h2>
+    <img src="{{coverImage}}" class="img-fluid">
+    <img src="{{lineArtImage}}" class="img-fluid">
+    <img src="{{sizeChartImage}}" class="img-fluid">
 
-<img src="{{coverImage}}" class="img-fluid">
-<img src="{{lineArtImage}}" class="img-fluid">
-<img src="{{sizeChartImage}}" class="img-fluid">
+  </div>
+
+  <div class="col-6">
+
+    <h3>Name:</h3><p>{{name}}</p>
+    <h3>Brand:</h3><p>{{brand}}</p>
+    <h3>Link:</h3><p>{{link}}</p>
+    <h3>Categories:</h3><p>{{categories}}</p>
+    <h3>Description:</h3><p>{{description}}</p>
+    <h3>Difficulty:</h3><p>{{difficulty}}</p>
+    <h3>Fabric Type:</h3><p>{{fabricType}}</p>
+    <h3>Fabric Choices:</h3><p>{{fabricChoices}}</p>
+    <h3>Format:</h3><p>{{format}}</p>
+    <h3>Printed yet? (if Digital):</h3><p>{{digitalPrinted}}</p>
+    <h3>In print?:</h3><p>{{inPrint}}</p>
+    <h3>Quantity:</h3><p>{{rating}}</p>
+    <h3>Size:</h3><p>{{letterSize}}{{numSize}}</p>
+    <h3>Tags:</h3><p>{{tags}}</p>
+
+  </div>
+
+</div>
