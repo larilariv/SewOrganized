@@ -1,11 +1,11 @@
-<h1>Edit Pattern Listing:</h1>
+<h1>Edit {{this.name}}:</h1>
 
 <form action="/patterns/{{this.name}}/?_method=put" method="POST">
 
-    <div>
+    {{!-- <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" class="form-control" value="{{this.name}}">
-    </div>
+    </div> --}}
 
     <div>
         <label for="brand">Brand:</label>
@@ -13,8 +13,23 @@
     </div>
 
     <div>
+        <label for="coverImage">Cover Image URL:</label>
+        <input type="text" id="coverImage" name="coverImage" class="form-control" value="{{this.coverImage}}">
+    </div>
+
+    <div>
+        <label for="lineArtImage">Line Art Image URL:</label>
+        <input type="text" id="lineArtImage" name="lineArtImage" class="form-control" value="{{this.lineArtImage}}">
+    </div>
+
+    <div>
+        <label for="sizeChartImage">Size Chart Image URL:</label>
+        <input type="text" id="sizeChartImage" name="sizeChartImage" class="form-control" value="{{this.sizeChartImage}}">
+    </div>
+
+    <div>
         <label for="link">Link:</label>
-        <input type="text" id="brand" name="link" class="form-control" value="{{this.link}}">
+        <input type="text" id="link" name="link" class="form-control" value="{{this.link}}">
     </div>
 
     <div>
@@ -82,11 +97,7 @@
         <input type="text" id="tags" name="tags" class="form-control" value="{{this.tags}}">
     </div>
 
-
-
-
-
     <input type="submit" value="Update Pattern Listing" class="btn btn-primary" />
-    <a href="/patterns" class="btn btn-secondary">Cancel</a>
+    <a href="/patterns/{{this.name}}" class="btn btn-secondary">Cancel</a>
 
 </form>
