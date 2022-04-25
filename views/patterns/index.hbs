@@ -1,10 +1,8 @@
 <div class="row">
   {{#each patterns}}
-    <div class="col-4">
-      <figure>
+    <div class="col-4 index-listings">
         <img src="{{this.coverImage}}" class="img-fluid">
-        <h2><a href="/patterns/{{this.name}}">{{this.name}}</a></h2>
-      </figure>
+        <h2 class="d-flex justify-content-center"><a href="/patterns/{{this.name}}">{{this.name}}</a></h2>
     </div>
   {{/each}}
 </div>
