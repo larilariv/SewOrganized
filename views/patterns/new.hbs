@@ -1,4 +1,4 @@
-<h1>Create a New Pattern</h1>
+<h1>Create a New Pattern Listing</h1>
 <form action="/patterns" method="POST">
 {{!-- Add note for required fields being marked with * or something similar --}}
 
@@ -134,7 +134,7 @@
         <textarea class="form-control" id="tags" name="tags" placeholder="Enter tags" value="{{this.tags}}" rows="2"></textarea>
     </div>
 
-  <input type="submit" value="Update Pattern Listing" class="btn btn-primary" />
-  <a href="/patterns/{{this.name}}" class="btn btn-secondary">Cancel</a>
+  <a type="submit" value="Create" class="btn btn-success" href="/patterns" role="button">Create</a>
+  <a type="submit" value="Cancel" class="btn btn-danger" href="/patterns" role="button">Cancel</a>
 
 </form>
