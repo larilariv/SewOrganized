@@ -1,57 +1,58 @@
-<div class="row container">
-
-  <div class="col-6">
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{{coverImage}}" class="d-block w-100" alt="Cover Image">
+<div class="container-flex">
+  <div class="row">
+    <div class="col-6">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{coverImage}}" class="d-block w-100" alt="Cover Image">
+          </div>
+          <div class="carousel-item">
+            <img src="{{lineArtImage}}" class="d-block w-100" alt="Line Art Image">
+          </div>
+          <div class="carousel-item">
+            <img src="{{sizeChartImage}}" class="d-block w-100" alt="Size Chart Image">
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="{{lineArtImage}}" class="d-block w-100" alt="Line Art Image">
-        </div>
-        <div class="carousel-item">
-          <img src="{{sizeChartImage}}" class="d-block w-100" alt="Size Chart Image">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-
-  <div class="col-6">
-
-    <div class="d-flex justify-content-between align-items-center">
-      <h1>{{brand}}: <a href="{{link}}">{{name}}</a></h1>
-      <div>
-        <a href="/patterns/{{this.name}}/edit" class="btn btn-primary">Edit</a>
-        <form action="/patterns/{{this.name}}?_method=DELETE" method="POST" class="d-inline">
-          <input type="submit" value="Delete" class="btn btn-danger" />
-        </form>
-        <a href="/patterns" class="btn btn-secondary">&larr; Back</a>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
 
-    {{!-- <div d-inline><h3>Name:</h3><p>{{name}}</p></div>
-    <div d-inline><h3>Brand:</h3><p>{{brand}}</p></div>
-    <div d-inline><h3>Link:</h3><p>{{link}}</p></div> --}}
-    <div d-inline><h3>Categories:</h3><p>{{categories}}</p></div>
-    <div d-inline><h3>Description:</h3><p>{{description}}</p></div>
-    <div d-inline><h3>Difficulty:</h3><p>{{difficulty}}</p></div>
-    <div d-inline><h3>Fabric Type:</h3><p>{{fabricType}}</p></div>
-    <div d-inline><h3>Fabric Choices:</h3><p>{{fabricChoices}}</p></div>
-    <div d-inline><h3>Format:</h3><p>{{format}}</p></div>
-    <div d-inline><h3>Printed yet? (if Digital):</h3><p>{{digitalPrinted}}</p></div>
-    <div d-inline><h3>In print?:</h3><p>{{inPrint}}</p></div>
-    <div d-inline><h3>Quantity:</h3><p>{{quantity}}</p></div>
-    <div d-inline><h3>Rating:</h3><p>{{rating}}</p></div>
-    <div d-inline><h3>Size:</h3><p>{{letterSize}}{{numSize}}</p></div>
-    <div d-inline><h3>Tags:</h3><p>{{tags}}</p></div>
+    <div class="col-6">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1>{{brand}}: <a href="{{link}}">{{name}}</a></h1>
+        <div>
+          <a href="/patterns/{{this.name}}/edit" class="btn btn-primary">Edit</a>
+          <form action="/patterns/{{this.name}}?_method=DELETE" method="POST" class="d-inline">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+          </form>
+          <a href="/patterns" class="btn btn-secondary">&larr; Back</a>
+        </div>
+      </div>
+
+      <div d-inline><h3>Name:</h3><p>{{name}}</p></div>
+      <div d-inline><h3>Brand:</h3><p>{{brand}}</p></div>
+      <div d-inline><h3>Link:</h3><p>{{link}}</p></div>
+      <div d-inline><h3>Categories:</h3><p>{{categories}}</p></div>
+      <div d-inline><h3>Description:</h3><p>{{description}}</p></div>
+      <div d-inline><h3>Difficulty:</h3><p>{{difficulty}}</p></div>
+      <div d-inline><h3>Fabric Type:</h3><p>{{fabricType}}</p></div>
+      <div d-inline><h3>Fabric Choices:</h3><p>{{fabricChoices}}</p></div>
+      <div d-inline><h3>Format:</h3><p>{{format}}</p></div>
+      <div d-inline><h3>Printed yet? (if Digital):</h3><p>{{digitalPrinted}}</p></div>
+      <div d-inline><h3>In print?:</h3><p>{{inPrint}}</p></div>
+      <div d-inline><h3>Quantity:</h3><p>{{quantity}}</p></div>
+      <div d-inline><h3>Rating:</h3><p>{{rating}}</p></div>
+      <div d-inline><h3>Size:</h3><p>{{letterSize}}{{numSize}}</p></div>
+      <div d-inline><h3>Tags:</h3><p>{{tags}}</p></div>
+
+    </div>
 
   </div>
 
