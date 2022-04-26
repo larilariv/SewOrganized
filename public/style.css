@@ -1,7 +1,6 @@
 body {
     background-color: #eaeede;
     font-family: 'Cormorant Infant', serif;
-    font-weight: 500;
 }
 .navbar {
     background-image: url("so_background.png");
@@ -10,7 +9,7 @@ body {
 }
 
 .index-listings {
-    padding: 30px;
+    padding: 20px;
     border: 10px solid #eaeede;
     background-color: tan;
 }
