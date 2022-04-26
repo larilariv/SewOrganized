@@ -1,4 +1,27 @@
+const { required } = require("nodemon/lib/config");
 const mongoose = require("../db/connection");
+
+const CategorySchema = new mongoose.Schema({
+  categoryName: [
+    {
+      type: String,
+      enum: [
+        "Activewear",
+        "Coats",
+        "Dresses",
+        "Jackets",
+        "Jumpsuits",
+        "Underwear",
+        "Pants",
+        "Shorts",
+        "Skirts",
+        "Sleepwear",
+        "Swimwear",
+        "Tops",
+      ],
+    },
+  ],
+});
 
 const PatternSchema = new mongoose.Schema(
   {
@@ -12,26 +35,11 @@ const PatternSchema = new mongoose.Schema(
     lineArtImage: String,
     sizeChartImage: String,
     link: String,
-    categories: [
-      {
-        type: String,
-        required: true,
-        enum: [
-          "Activewear",
-          "Coats",
-          "Dresses",
-          "Jackets",
-          "Jumpsuits",
-          "Underwear",
-          "Pants",
-          "Shorts",
-          "Skirts",
-          "Sleepwear",
-          "Swimwear",
-          "Tops",
-        ],
-      },
-    ],
+    categories: {
+      type: [CategorySchema],
+      default: undefined,
+      required: true,
+    },
     description: String,
     difficulty: {
       type: String,
