@@ -13,15 +13,3 @@ body {
     border: 10px solid #eaeede;
     background-color: tan;
 }
-
-.carousel-indicators {
-    background-color: greenyellow;
-}
-
-.carousel-control-prev {
-    background-color: aqua;
-}
-
-.carousel-control-next {
-    background-color: hotpink;
-}
