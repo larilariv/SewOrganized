@@ -66,25 +66,20 @@
         </div>
       </div>
 
-      <div d-inline><h3>Name:</h3><p>{{name}}</p></div>
-      <div d-inline><h3>Brand:</h3><p>{{brand}}</p></div>
+      {{!-- <div d-inline><h3>Name:</h3><p>{{name}}</p></div>
+      <div d-inline><h3>Brand:</h3><p>{{brand}}</p></div> --}}
+      <div d-inline><h3>Categories:</h3><p>{{categories}}</p></div>
+      <div d-inline><h3>In print?:</h3><p>{{inPrint}}</p></div>
+      {{! Create link button if inPrint = true }}
       <div d-inline><h3>Link:</h3><p>{{link}}</p></div>
-      <div d-inline>
-        <h3>Categories:</h3>
-        <p>{{categories}}</p>
-      </div>
       <div d-inline><h3>Description:</h3><p>{{description}}</p></div>
       <div d-inline><h3>Difficulty:</h3><p>{{difficulty}}</p></div>
       <div d-inline><h3>Fabric Type:</h3><p>{{fabricType}}</p></div>
-      <div d-inline><h3>Fabric Choices:</h3><p>{{fabricChoices}}</p></div>
+      <div d-inline><h3>Fabric Recommendations:</h3><p>{{fabricRecs}}</p></div>
       <div d-inline><h3>Format:</h3><p>{{format}}</p></div>
-      <div d-inline><h3>Printed yet? (if Digital):</h3><p
-        >{{digitalPrinted}}</p></div>
-      <div d-inline><h3>In print?:</h3><p>{{inPrint}}</p></div>
       <div d-inline><h3>Quantity:</h3><p>{{quantity}}</p></div>
       <div d-inline><h3>Rating:</h3><p>{{rating}}</p></div>
-      <div d-inline><h3>Size:</h3><p>{{letterSize}}{{numSize}}</p></div>
-      <div d-inline><h3>Tags:</h3><p>{{tags}}</p></div>
+      <div d-inline><h3>Size Range:</h3><p>{{sizeRange}}</p></div>
 
     </div>
 
