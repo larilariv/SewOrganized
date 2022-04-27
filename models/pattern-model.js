@@ -1,28 +1,6 @@
 const { required } = require("nodemon/lib/config");
 const mongoose = require("../db/connection");
 
-const CategorySchema = new mongoose.Schema({
-  categoryName: [
-    {
-      type: String,
-      enum: [
-        "Activewear",
-        "Coats",
-        "Dresses",
-        "Jackets",
-        "Jumpsuits",
-        "Underwear",
-        "Pants",
-        "Shorts",
-        "Skirts",
-        "Sleepwear",
-        "Swimwear",
-        "Tops",
-      ],
-    },
-  ],
-});
-
 const PatternSchema = new mongoose.Schema(
   {
     name: {
@@ -31,32 +9,23 @@ const PatternSchema = new mongoose.Schema(
       unique: true,
     },
     brand: { type: String, required: true },
+    categories: [{ type: String, required: true }],
     coverImage: String,
     lineArtImage: String,
     sizeChartImage: String,
+    inPrint: Boolean,
     link: String,
-    categories: {
-      type: [CategorySchema],
-      default: undefined,
-      required: true,
-    },
     description: String,
     difficulty: {
       type: String,
       enum: ["Very Easy", "Easy", "Average", "Advanced"],
     },
     fabricType: { type: String, enum: ["Knit", "Woven"] },
-    fabricChoices: [{ type: String }],
+    fabricRecs: [{ type: String }],
     format: { type: String, enum: ["Digital", "Printed", "Both"] },
-    digitalPrinted: Boolean,
-    inPrint: Boolean,
     quantity: Number,
     rating: { type: Number, default: 0, min: 0, max: 5 },
-    letterSize: [{ type: String, enum: ["XS", "S", "M", "L", "XL"] }],
-    numSize: [
-      { type: Number, enum: [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26] },
-    ],
-    tags: [{ type: String }],
+    sizeRange: String,
   },
   { timestamps: true }
 );

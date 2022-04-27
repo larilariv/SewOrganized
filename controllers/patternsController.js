@@ -63,6 +63,11 @@ router.put("/:name", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  console.log(req.body);
+  if (typeof req.body.categories === "string") {
+    req.body.categories = [req.body.categories];
+  }
+  console.log(req.body);
   Pattern.create(req.body)
     .then((pattern) => {
       res.redirect("/patterns");
