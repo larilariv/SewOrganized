@@ -27,6 +27,7 @@
     />
 
   </div>
+
   <div class="form-group d-flex align-items-center">
     <select class="form-control" id="brand" name="brand" value="{{this.brand}}">
       <option selected disabled>Select Brand (Required)</option>
@@ -47,7 +48,6 @@
       name="categories"
       value="{{this.categories}}"
       aria-label="multiple select categories"
-      rows="5"
     >
       <option selected disabled>Select Categories (Required)</option>
       <option value="Activewear">Activewear</option>
@@ -173,17 +173,6 @@
   </div>
 
   <div class="form-group d-flex align-items-center">
-    <input
-      type="number"
-      class="form-control"
-      id="quantity"
-      name="quantity"
-      placeholder="Enter Quantity"
-      value="{{this.quantity}}"
-    />
-  </div>
-
-  <div class="form-group d-flex align-items-center">
     <select
       class="form-control"
       id="format"
@@ -205,6 +194,17 @@
       name="rating"
       placeholder="Enter Rating"
       value="{{this.rating}}"
+    />
+  </div>
+
+  <div class="form-group d-flex align-items-center">
+    <input
+      type="text"
+      class="form-control"
+      id="sizeRange"
+      name="sizeRange"
+      placeholder="Enter Size Range"
+      value="{{this.sizeRange}}"
     />
   </div>
 

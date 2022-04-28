@@ -3,12 +3,44 @@ const router = express.Router();
 
 const Pattern = require("../models/pattern-model");
 
+// router.get("/", (req, res) => {
+//   let brand = req.query.brands;
+//   console.log(brand);
+//   brand ? {
+//     Pattern.find({ brand: brand })
+//       .sort("name")
+//       .then((patterns) => {
+//         res.render("patterns/index", { patterns });
+//       })
+//       .catch(console.error);
+//   } : {
+//     Pattern.find({})
+//       .sort("name")
+//       .then((patterns) => {
+//         res.render("patterns/index", { patterns });
+//       })
+//       .catch(console.error);
+//   }
+// });
+
 router.get("/", (req, res) => {
-  Pattern.find({})
-    .then((patterns) => {
-      res.render("patterns/index", { patterns });
-    })
-    .catch(console.error);
+  let brand = req.query.brands;
+  let category = req.query.categories;
+  if (brand !== undefined) {
+    Pattern.find({ brand: brand })
+      .sort("name")
+      .then((patterns) => {
+        res.render("patterns/index", { patterns });
+      })
+      .catch(console.error);
+  } else {
+    Pattern.find({})
+      .sort("name")
+      .then((patterns) => {
+        res.render("patterns/index", { patterns });
+      })
+      .catch(console.error);
+  }
 });
 
 router.get("/new", (req, res) => {
@@ -63,11 +95,9 @@ router.put("/:name", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
   if (typeof req.body.categories === "string") {
     req.body.categories = [req.body.categories];
   }
-  console.log(req.body);
   Pattern.create(req.body)
     .then((pattern) => {
       res.redirect("/patterns");

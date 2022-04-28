@@ -23,7 +23,6 @@ const PatternSchema = new mongoose.Schema(
     fabricType: { type: String, enum: ["Knit", "Woven"] },
     fabricRecs: [{ type: String }],
     format: { type: String, enum: ["Digital", "Printed", "Both"] },
-    quantity: Number,
     rating: { type: Number, default: 0, min: 0, max: 5 },
     sizeRange: String,
   },

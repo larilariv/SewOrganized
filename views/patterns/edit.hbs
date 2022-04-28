@@ -1,136 +1,207 @@
 <form action="/patterns/{{this.name}}/?_method=put" method="POST">
 
+  <div class="d-flex justify-content-between align-items-center">
     <h1>Edit {{this.name}}:</h1>
 
-    <input type="submit" class="btn btn-primary" value="Update Pattern Listing" />
-    <input type="submit" class="btn btn-secondary" value="Cancel" />
-
-    <div class="form-group d-flex align-items-center">
-        <label for="brand">Brand:</label>
-        <select class="form-control" id="brand" name="brand" value="{{this.brand}}">
-            <option>Burda</option>
-            <option>Butterick</option>
-            <option>McCall's</option>
-            <option>New Look</option>
-            <option>Simplicity</option>
-            <option>Vogue</option>
-        </select>
+    <div>
+      <input
+        type="submit"
+        class="btn btn-primary"
+        value="Update Pattern Listing"
+      />
+      <input type="submit" class="btn btn-secondary" value="Cancel" />
     </div>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="coverImage">Cover Image URL:</label>
-        <input type="text" class="form-control" id="coverImage" name="coverImage" placeholder="Enter URL" value="{{this.coverImage}}">
-    </div>
+  <div class="form-group">
+    <label for="brand">Brand (Required)</label>
+    <select class="form-control" id="brand" name="brand" value="{{this.brand}}">
+      <option>Burda</option>
+      <option>Butterick</option>
+      <option>McCall's</option>
+      <option>New Look</option>
+      <option>Simplicity</option>
+      <option>Vogue</option>
+    </select>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="lineArtImage">Line Art Image URL:</label>
-        <input type="text" class="form-control" id="lineArtImage" name="lineArtImage" placeholder="Enter URL" value="{{this.lineArtImage}}">
-    </div>
+  <div class="form-group">
+    <label for="categories">Categories (Required)</label>
+    <select
+      class="form-select"
+      multiple
+      id="categories"
+      name="categories"
+      value="{{this.categories}}"
+      aria-label="multiple select categories"
+    >
+      <option value="Activewear">Activewear</option>
+      <option value="Coats">Coats</option>
+      <option value="Dresses">Dresses</option>
+      <option value="Jackets">Jackets</option>
+      <option value="Jumpsuits">Jumpsuits</option>
+      <option value="Underwear">Underwear</option>
+      <option value="Pants">Pants</option>
+      <option value="Shorts">Shorts</option>
+      <option value="Skirts">Skirts</option>
+      <option value="Sleepwear">Sleepwear</option>
+      <option value="Swimwear">Swimwear</option>
+      <option value="Tops">Tops</option>
+    </select>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="sizeChartImage">Size Chart Image URL:</label>
-        <input type="text" class="form-control" id="sizeChartImage" name="sizeChartImage" placeholder="Enter URL" value="{{this.sizeChartImage}}">
-    </div>
+  <div class="form-group">
+    <label for="coverImage">Cover Image URL</label>
+    <input
+      type="text"
+      class="form-control"
+      id="coverImage"
+      name="coverImage"
+      placeholder="Enter URL"
+      value="{{this.coverImage}}"
+    />
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="link">Link:</label>
-        <input type="text" class="form-control" id="link" name="link" placeholder="Enter URL" value="{{this.link}}">
-    </div>
+  <div class="form-group">
+    <label for="lineArtImage">Line Art Image URL</label>
+    <input
+      type="text"
+      class="form-control"
+      id="lineArtImage"
+      name="lineArtImage"
+      placeholder="Enter URL"
+      value="{{this.lineArtImage}}"
+    />
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="categories">Categories:</label>
-        <select class="form-control" id="categories" name="categories" value="{{this.categories}}">
-            <option>Activewear</option>
-            <option>Coats</option>
-            <option>Dresses</option>
-            <option>Jackets</option>
-            <option>Jumpsuits</option>
-            <option>Underwear</option>
-            <option>Pants</option>
-            <option>Shorts</option>
-            <option>Skirts</option>
-            <option>Sleepwear</option>
-            <option>Swimwear</option>
-            <option>Tops</option>
-        </select>
-    </div>
+  <div class="form-group">
+    <label for="sizeChartImage">Size Chart Image URL</label>
+    <input
+      type="text"
+      class="form-control"
+      id="sizeChartImage"
+      name="sizeChartImage"
+      placeholder="Enter URL"
+      value="{{this.sizeChartImage}}"
+    />
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="description">Description:</label>
-        <textarea class="form-control" id="description" name="description" placeholder="Enter description" value="{{this.description}}" rows="2"></textarea>
-    </div>
+  <div class="form-group">
+    <label for="inPrint">In print?</label>
+    <select
+      class="form-control"
+      id="inPrint"
+      id="inPrint"
+      value="{{this.inPrint}}"
+    >
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="difficulty">Difficulty:</label>
-        <select class="form-control" id="difficulty" name="difficulty" value="{{this.difficulty}}">
-            <option>Select difficulty</option>
-            <option>Very Easy</option>
-            <option>Easy</option>
-            <option>Average</option>
-            <option>Difficult</option>
-        </select>
-    </div>
+  <div class="form-group">
+    <label for="link">Link to Purchase</label>
+    <input
+      type="text"
+      class="form-control"
+      id="link"
+      name="link"
+      placeholder="Link to Purchase URL"
+      value="{{this.link}}"
+    />
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="fabricType">Fabric Type:</label>
-        <select class="form-control" id="fabricType" name="fabricType" value="{{this.fabricType}}">
-            <option>Select fabric type</option>
-            <option>Knit</option>
-            <option>Woven</option>
-        </select>
-    </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea
+      class="form-control"
+      id="description"
+      name="description"
+      placeholder="Enter description"
+      value="{{this.description}}"
+      rows="2"
+    ></textarea>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="fabricChoices">Fabric Choices:</label>
-        <input type="text" class="form-control" id="fabricChoices" name="fabricChoices" placeholder="Enter fabric choices" value="{{this.fabricChoices}}">
-    </div>
+  <div class="form-group">
+    <label for="difficulty">Difficulty</label>
+    <select
+      class="form-control"
+      id="difficulty"
+      name="difficulty"
+      value="{{this.difficulty}}"
+    >
+      <option selected disabled>Select Difficulty Level</option>
+      <option>Very Easy</option>
+      <option>Easy</option>
+      <option>Average</option>
+      <option>Difficult</option>
+    </select>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="format">Format:</label>
-        <select class="form-control" id="format" name="format" value="{{this.format}}">
-            <option>Select format</option>
-            <option>Digital</option>
-            <option>Printed</option>
-            <option>Both</option>
-        </select>
-    </div>
+  <div class="form-group">
+    <label for="fabricType">Fabric Type</label>
+    <select
+      class="form-control"
+      id="fabricType"
+      name="fabricType"
+      value="{{this.fabricType}}"
+    >
+      <option>Select fabric type</option>
+      <option>Knit</option>
+      <option>Woven</option>
+    </select>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="digitalPrinted">Printed yet? (if Digital):</label>
-        <input type="text" class="form-control" id="digitalPrinted" name="digitalPrinted" placeholder="Yes or no?" value="{{this.digitalPrinted}}">
-    </div>
+  <div class="form-group">
+    <label for="fabricChoices">Fabric Choices</label>
+    <input
+      type="text"
+      class="form-control"
+      id="fabricChoices"
+      name="fabricChoices"
+      placeholder="Enter fabric choices"
+      value="{{this.fabricChoices}}"
+    />
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="inPrint">In print?:</label>
-        <input type="text" class="form-control" id="inPrint" name="inPrint" placeholder="Yes or no?" value="{{this.inPrint}}">
-    </div>
+  <div class="form-group">
+    <label for="format">Format</label>
+    <select
+      class="form-control"
+      id="format"
+      name="format"
+      value="{{this.format}}"
+    >
+      <option>Select Format</option>
+      <option>Digital</option>
+      <option>Printed</option>
+      <option>Both</option>
+    </select>
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="quantity">Quantity:</label>
-        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity" value="{{this.quantity}}">
-    </div>
+  <div class="form-group">
+    <label for="rating">Rating</label>
+    <input
+      type="number"
+      class="form-control"
+      id="rating"
+      name="rating"
+      placeholder="Enter Rating"
+      value="{{this.rating}}"
+    />
+  </div>
 
-    <div class="form-group d-flex align-items-center">
-        <label for="rating">Rating:</label>
-        <input type="number" class="form-control" id="rating" name="rating" placeholder="Enter rating" value="{{this.rating}}">
-    </div>
-
-    <div class="form-group d-flex align-items-center">
-        <label for="letterSize">Letter Size:</label>
-        <input type="text" class="form-control" id="letterSize" name="letterSize" placeholder="Enter letter size(s)" value="{{this.letterSize}}">
-    </div>
-
-    <div class="form-group d-flex align-items-center">
-        <label for="numSize">Number Size:</label>
-        <input type="text" class="form-control" id="numSize" name="numSize" placeholder="Enter number size(s)" value="{{this.numSize}}">
-    </div>
-
-    <div class="form-group d-flex align-items-center">
-        <label for="tags">Tags:</label>
-        <textarea class="form-control" id="tags" name="tags" placeholder="Enter tags" value="{{this.tags}}" rows="2"></textarea>
-    </div>
-
-    {{!-- <input type="submit" value="Update Pattern Listing" class="btn btn-primary" />
-    <a href="/patterns/{{this.name}}" class="btn btn-secondary">Cancel</a> --}}
+  <div class="form-group">
+    <label for="sizeRange">Size Range</label>
+    <input
+      type="text"
+      class="form-control"
+      id="sizeRange"
+      name="sizeRange"
+      placeholder="Enter Size Range"
+      value="{{this.sizeRange}}"
+    />
+  </div>
 
 </form>
