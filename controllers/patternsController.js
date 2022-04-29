@@ -3,31 +3,18 @@ const router = express.Router();
 
 const Pattern = require("../models/pattern-model");
 
-// router.get("/", (req, res) => {
-//   let brand = req.query.brands;
-//   console.log(brand);
-//   brand ? {
-//     Pattern.find({ brand: brand })
-//       .sort("name")
-//       .then((patterns) => {
-//         res.render("patterns/index", { patterns });
-//       })
-//       .catch(console.error);
-//   } : {
-//     Pattern.find({})
-//       .sort("name")
-//       .then((patterns) => {
-//         res.render("patterns/index", { patterns });
-//       })
-//       .catch(console.error);
-//   }
-// });
-
 router.get("/", (req, res) => {
   let brand = req.query.brands;
   let category = req.query.categories;
   if (brand !== undefined) {
     Pattern.find({ brand: brand })
+      .sort("name")
+      .then((patterns) => {
+        res.render("patterns/index", { patterns });
+      })
+      .catch(console.error);
+  } else if (category !== undefined) {
+    Pattern.find({ categories: category })
       .sort("name")
       .then((patterns) => {
         res.render("patterns/index", { patterns });
