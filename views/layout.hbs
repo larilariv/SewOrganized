@@ -6,9 +6,9 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/style.css" />
@@ -23,59 +23,35 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/patterns">
-        {{! <img src="thimble-logo.png" width="30" height="30" alt="Line drawing of thimble" loading="lazy"> }}
-        Sew Organized
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="brandsDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Brands
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="brandsDropdown">
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?brands=Burda"
-                >Burda</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?brands=Butterick"
-                >Butterick</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?brands=McCall's"
-                >McCall's</a></li>
-              <li><a class="dropdown-item" href="/patterns?brands=New Look">New
-                  Look</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?brands=Simplicity"
-                >Simplicity</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?brands=Vogue Patterns"
-                >Vogue Patterns</a></li>
-            </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/patterns">
+          <img src="thimble-logo.png" width="30" height="30" alt="Line drawing of thimble">
+          Sew Organized
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="brandsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Brands
+              </a>
+          <ul class="dropdown-menu" aria-labelledby="brandsDropdown">
+            <li><a class="dropdown-item" href="/patterns?brands=Burda">Burda</a></li>
+            <li><a class="dropdown-item" href="/patterns?brands=Butterick">Butterick</a></li>
+            <li><a class="dropdown-item" href="/patterns?brands=McCall's">McCall's</a></li>
+            <li><a class="dropdown-item" href="/patterns?brands=New Look">New Look</a></li>
+            <li><a class="dropdown-item" href="/patterns?brands=Simplicity">Simplicity</a></li>
+            <li><a class="dropdown-item" href="/patterns?brands=Vogue Patterns">Vogue Patterns</a></li>
+          </ul>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -89,54 +65,18 @@
               Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Activewear"
-                >Activewear</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Coats"
-                >Coats</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Dresses"
-                >Dresses</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Jackets"
-                >Jackets</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Jumpsuits"
-                >Jumpsuits</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Underwear"
-                >Underwear</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Pants"
-                >Pants</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Shorts"
-                >Shorts</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Skirts"
-                >Skirts</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Sleepwear"
-                >Sleepwear</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Swimwear"
-                >Swimwear</a></li>
-              <li><a
-                  class="dropdown-item"
-                  href="/patterns?categories=Tops"
-                >Tops</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Activewear">Activewear</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Coats">Coats</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Dresses">Dresses</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Jackets">Jackets</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Jumpsuits">Jumpsuits</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Underwear">Underwear</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Pants">Pants</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Shorts">Shorts</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Skirts">Skirts</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Sleepwear">Sleepwear</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Swimwear">Swimwear</a></li>
+              <li><a class="dropdown-item" href="/patterns?categories=Tops">Tops</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -144,17 +84,14 @@
           </li>
         </ul>
       </div>
+      </div>
     </nav>
 
     <div class="container">
       {{{body}}}
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </script>
   </body>
 </html>
