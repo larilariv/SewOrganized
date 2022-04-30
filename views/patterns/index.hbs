@@ -1,9 +1,11 @@
-<div class="row">
+<div class="row row-cols-3">
   {{#each patterns}}
-    <div class="col-4 index-listings">
+    <div class="index-listings">
       <a class="text-decoration-none" href="/patterns/{{this.name}}">
-        <img src="{{this.coverImage}}" class="img-fluid" />
-        <h2 class="d-flex justify-content-center">{{this.name}}</h2>
+        <img src="{{this.coverImage}}" class="img-fluid shadow-sm" />
+        <h1
+          class="d-flex justify-content-center link-secondary"
+        >{{this.name}}</h1>
       </a>
     </div>
   {{/each}}

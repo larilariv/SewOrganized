@@ -1,20 +1,17 @@
 <form action="/patterns" method="POST">
-  {{! Add note for required fields being marked with * or something similar }}
-  {{! Page Name and Create/Cancel buttons }}
+
   <div class="d-flex justify-content-between align-items-center">
     <h1>New Pattern Listing</h1>
 
     <div>
       <input
         type="submit"
-        class="btn btn-primary"
+        class="btn btn-success"
         value="Create New Pattern Listing"
       />
       <input type="submit" class="btn btn-secondary" value="Cancel" />
     </div>
   </div>
-
-  {{! Input for Name, Brand, Category }}
 
   <div class="form-group d-flex align-items-center">
     <input
@@ -22,7 +19,7 @@
       class="form-control"
       id="name"
       name="name"
-      placeholder="Name (Required)"
+      placeholder="Enter Name (Required)"
       value="{{this.name}}"
     />
 
@@ -34,7 +31,7 @@
       <option>Burda</option>
       <option>Butterick</option>
       <option>McCall's</option>
-      <option>New Look</option>
+      <option>NewLook</option>
       <option>Simplicity</option>
       <option>Vogue</option>
     </select>
@@ -49,7 +46,8 @@
       value="{{this.categories}}"
       aria-label="multiple select categories"
     >
-      <option selected disabled>Select Categories (Required)</option>
+      <option selected disabled>Select Categories (Required, hold command to
+        select more than one)</option>
       <option value="Activewear">Activewear</option>
       <option value="Coats">Coats</option>
       <option value="Dresses">Dresses</option>
@@ -71,7 +69,7 @@
       class="form-control"
       id="coverImage"
       name="coverImage"
-      placeholder="Cover Image URL"
+      placeholder="Enter Cover Image URL"
       value="{{this.coverImage}}"
     />
   </div>
@@ -82,7 +80,7 @@
       class="form-control"
       id="lineArtImage"
       name="lineArtImage"
-      placeholder="Line Art Image URL"
+      placeholder="Enter Line Art Image URL"
       value="{{this.lineArtImage}}"
     />
   </div>
@@ -93,22 +91,9 @@
       class="form-control"
       id="sizeChartImage"
       name="sizeChartImage"
-      placeholder="Size Chart Image URL"
+      placeholder="Enter Size Chart Image URL"
       value="{{this.sizeChartImage}}"
     />
-  </div>
-
-  <div class="form-group d-flex align-items-center">
-    <select
-      class="form-control"
-      id="inPrint"
-      id="inPrint"
-      value="{{this.inPrint}}"
-    >
-      <option selected disabled>In Print?</option>
-      <option value="true">Yes</option>
-      <option value="false">No</option>
-    </select>
   </div>
 
   <div class="form-group d-flex align-items-center">
@@ -117,7 +102,7 @@
       class="form-control"
       id="link"
       name="link"
-      placeholder="Link to Purchase URL"
+      placeholder="Enter Link to Purchase URL"
       value="{{this.link}}"
     />
   </div>
@@ -127,7 +112,7 @@
       class="form-control"
       id="description"
       name="description"
-      placeholder="Description"
+      placeholder="Enter Description"
       value="{{this.description}}"
       rows="2"
     ></textarea>
@@ -167,7 +152,7 @@
       class="form-control"
       id="fabricRecs"
       name="fabricRecs"
-      placeholder="Fabric Recommendations"
+      placeholder="Enter Fabric Recommendations"
       value="{{this.fabricRecs}}"
     />
   </div>
@@ -184,17 +169,6 @@
       <option>Printed</option>
       <option>Both</option>
     </select>
-  </div>
-
-  <div class="form-group d-flex align-items-center">
-    <input
-      type="number"
-      class="form-control"
-      id="rating"
-      name="rating"
-      placeholder="Enter Rating"
-      value="{{this.rating}}"
-    />
   </div>
 
   <div class="form-group d-flex align-items-center">

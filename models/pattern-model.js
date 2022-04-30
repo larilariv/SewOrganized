@@ -13,7 +13,6 @@ const PatternSchema = new mongoose.Schema(
     coverImage: String,
     lineArtImage: String,
     sizeChartImage: String,
-    inPrint: Boolean,
     link: String,
     description: String,
     difficulty: {
@@ -23,7 +22,6 @@ const PatternSchema = new mongoose.Schema(
     fabricType: { type: String, enum: ["Knit", "Woven"] },
     fabricRecs: [{ type: String }],
     format: { type: String, enum: ["Digital", "Printed", "Both"] },
-    rating: { type: Number, default: 0, min: 0, max: 5 },
     sizeRange: String,
   },
   { timestamps: true }
