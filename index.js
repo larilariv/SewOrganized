@@ -12,6 +12,10 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(methodOverride("_method"));
 
+app.get("/", (req, res) => {
+  res.redirect("/patterns");
+});
+
 app.use("/patterns", patternsController);
 
 const port = process.env.PORT || 7000;
