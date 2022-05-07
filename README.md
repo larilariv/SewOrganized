@@ -24,11 +24,15 @@ Within the pattern page, users can edit and delete the pattern listing or return
 
 
 ## Version 1 Screenshots
-![Home](https://imgur.com/kEBiUsp)
+### Demo of Home Page and Navbar
+![demo_home](https://user-images.githubusercontent.com/97875137/167243079-10784f1f-022f-4245-bddd-4f25d851a80d.gif)
 
-![Create New](https://imgur.com/g8GM2Lr)
+### Demo of Create New & Delete
+![demo_new](https://user-images.githubusercontent.com/97875137/167243092-db8932e2-e242-46c2-8b24-09e768932961.gif)
 
-![Edit](https://imgur.com/PxxtUKp)
+### Demo of Pattern Page and Edit
+![demo_edit](https://user-images.githubusercontent.com/97875137/167243088-fab502b9-722c-4003-af4f-2367ea101ffa.gif)
+
 
 
 ## User Stories
